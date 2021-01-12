@@ -30,9 +30,9 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 ###### process the data
 #0 is a dog, 1  is a cat
-train_path="/home/saba/Downloads/skin cancer/train"
-valid_path="/home/saba/Downloads/skin cancer/valid"
-test_path="/home/saba/Downloads/skin cancer/test"
+train_path="/home/saba/PycharmProjects/testing/DeepLearning/DNN_Project6/skin cancer/train"
+valid_path="/home/saba/PycharmProjects/testing/DeepLearning/DNN_Project6/skin cancer/valid"
+test_path="/home/saba/PycharmProjects/testing/DeepLearning/DNN_Project6/skin cancer/test"
 
 
 
