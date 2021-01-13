@@ -1,5 +1,5 @@
 
-
+import flask
 import os #ignore future warning
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #to ignore warning instead of using tf
 
@@ -21,35 +21,25 @@ import random
 import matplotlib.pyplot as plt
 from PIL import Image
 import cv2
-
-
-
-import os #ignore future warning
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #to ignore warning instead of using tf
-
-# import tensorflow as tf
-# tf.logging.set_verbosity(tf.logging.ERROR) # this line is for hiding the futerwarning of tensorflow
-
 from matplotlib import pyplot as plt
 from keras.utils import np_utils
 from keras.utils.np_utils import to_categorical
-from keras.layers import Dense, Activation, Flatten, Dropout, BatchNormalization
-from keras.layers import Dense,Dropout,Flatten,Conv2D,MaxPooling2D
-from keras.constraints import maxnorm
-from keras.preprocessing.image import ImageDataGenerator
 from keras import regularizers
 from keras import optimizers
-import numpy as np
 import random
 from keras.models import Sequential, load_model
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping
-import tensorflow as tf
 import itertools
 import glob
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import seaborn as sns
+import pdb
+
+
+
+
 #call your data
 train_path="/home/saba/PycharmProjects/testing/DeepLearning/DNN_Project6/skin cancer/train"
 valid_path="/home/saba/PycharmProjects/testing/DeepLearning/DNN_Project6/skin cancer/valid"
@@ -115,6 +105,11 @@ model.fit(x=train_batches,
             verbose=2
 )
 
+
+##### save the model
+model.save("mobile_net_test.h5")
+
+# cnn4 = load_model("cnn4.h5")
 
 predictions = model.predict(x=test_batches, steps=len(test_batches), verbose=0)
 predictions =np.round(predictions)
