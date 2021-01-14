@@ -36,7 +36,8 @@
 
 ### the making of a model that is pretrained: MobileNet from Keras
 * model_mobilenet.py
-* Those pretrained models enables to make use of it's complete potential and use all layers not-fully connected CNN layers or some of them. This happens by freezing some we don't want to be activated.  
+* Those pretrained models enables to make use of it's complete potential and use all layers not-fully connected CNN layers or some of them. This happens by freezing some we don't want to be activated.
+* the results of the training can be found in20200112training_results.odt    
 
 ### apply data augmentation 
 * in order to improve the model and reduce overfitting, data augmentation was applied: due to a discrepancy between the model's 'accuracy' and 'validation_accuracy':
