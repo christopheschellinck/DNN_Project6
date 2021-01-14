@@ -27,8 +27,11 @@ def upload_file():
 
 
 if __name__ == '__main__':
-    #global model
-    #model = load_model('')
-    app.run(host='0.0.0.0', port=7000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    # Threaded option to enable multiple instances for
+    # multiple user access support
+    # You will also define the host to "0.0.0.0" because localhost
+    # will only be reachable from inside de server.
+    app.run(host="0.0.0.0", threaded=True, port=port)
 
     
