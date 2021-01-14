@@ -1,0 +1,90 @@
+﻿Mobilenet B
+all batch sizes 10 unless otherwise stated
+all frozen layers -23 unless otherwise stated
+
+
+Data Augment: parameters: brightness_range=[0.2,1.0]; -23 layers; lr:0.0001
+Epoch 10/10
+88/88 - 48s 552ms/step - loss: 0.0760 - accuracy: 0.9807 - val_loss: 0.7348 - val_accuracy: 0.7222
+Predictions: True neg 51 > False pos 12; False neg 16 < True pos 49
+
+Data Augment: parameters: brightness_range=[0.2,1.0], fill_mode='nearest'; -23 layers; lr:0.0001
+Epoch 10/10
+88/88 - 45s - loss: 0.0687 - accuracy: 0.9886 - val_loss: 0.7726 - val_accuracy: 0.7341
+Predictions: True neg 48 > False pos 15; False neg 11 < True pos 52
+
+Data Augment: parameters: brightness_range=[0.2,1.0]; -23 layers; lr:0.0001, batch size=15
+Epoch 10/10
+59/59 - 55s 924ms/step - loss: 0.0728 - accuracy: 0.9869 - val_loss: 0.7602 - val_accuracy: 0.6865
+Predictions: True neg 46 > False pos 17; False neg 12 < True pos 51
+
+Data Augment: parameters: rotation_range=45; brightness_range=[0.2,1.0]; -23 layers; lr:0.0001
+Epoch 10/10
+88/88 - 50s 564ms/step - loss: 0.2924 - accuracy: 0.8811 - val_loss: 0.8501 - val_accuracy: 0.6786
+Predictions: True neg 58 > False pos 5; False neg 24 < True pos 39
+
+Epoch 10/10
+88/88 - 44s - loss: 0.0447 - accuracy: 0.9943 - val_loss: 0.8001 - val_accuracy: 0.6825
+Predictions: True neg 40 > False pos 23; False neg 11 < True pos 52
+
+Data Augment: BOuman example
+Epoch 10/10
+88/88 - 46s - loss: 0.4058 - accuracy: 0.8114 - val_loss: 1.0402 - val_accuracy: 0.6270
+Predictions: True neg 50 > False pos 13; False neg 50 > True pos 13
+
+Data Augment: parameters: rotation_range=90
+Epoch 10/10
+88/88 - 48s - loss: 0.3573 - accuracy: 0.8386 - val_loss: 0.7469 - val_accuracy: 0.7222
+Predictions: True neg 43 > False pos 20; False neg 35 > True pos 20
+
+Data Augment: parameters: rotation_range=45; -18 layers; lr:0.09
+Epoch 10/10
+88/88 - 49s 552ms/step - loss: 0.5218 - accuracy: 0.7396 - val_loss: 0.5995 - val_accuracy: 0.6349
+Predictions: True neg 27 < False pos 36; False neg 19 < True pos 44
+
+Data Augment: parameters: rotation_range=45; -18 layers; lr:0.0001
+Epoch 10/10
+88/88 - 52s 587ms/step - loss: 0.2688 - accuracy: 0.8823 - val_loss: 0.7211 - val_accuracy: 0.7143
+Predictions: True neg 40 > False pos 23; False neg 44 > True pos 19
+
+Data Augment: parameters: rotation_range=45; brightness_range=[0.2,1.0]; -18 layers; lr:0.0001
+Epoch 10/10
+88/88 - 51s 581ms/step - loss: 0.2809 - accuracy: 0.8861 - val_loss: 0.7315 - val_accuracy: 0.6905
+Predictions: True neg 45 > False pos 18; False neg 11 < True pos 52
+
+
+Data Augment: parameters: brightness_range=[0.2,1.0], zca_whitening=False, 
+zca_epsilon=1e-06, fill_mode='nearest'; -23 layers; lr:0.0001
+Epoch 10/10
+88/88 - 52s - loss: 0.0874 - accuracy: 0.9761 - val_loss: 0.8941 - val_accuracy: 0.6984
+Predictions: True neg 51 > False pos 12; False neg 27 < True pos 36
+
+
+
+Data Augment: parameters: brightness_range=[0.2,1.0]; -23 layers; lr:0.0001
+### adding another Dense layer to the network: to incease val_accuracy and decrease accuracy
+x = Dense(units=128, activation='relu')(x)
+Epoch 10/10
+88/88 - 46s - loss: 0.0630 - accuracy: 0.9818 - val_loss: 1.1359 - val_accuracy: 0.6746
+Predictions: True neg 59 > False pos 4; False neg 32 < True pos 31
+
+Data Augment: parameters: brightness_range=[0.2,1.0]; color_mode='rgb'; -23 layers; lr:0.0001
+Epoch 10/10
+88/88 - 46s - loss: 0.1011 - accuracy: 0.9682 - val_loss: 0.8273 - val_accuracy: 0.7103
+Predictions: True neg 59 > False pos 4; False neg 32 < True pos 31
+
+Data Augment: parameters: brightness_range=[0.2,1.0]; -23 layers; lr:0.0001
+Epoch 30/30
+88/88 - 56s - loss: 0.0706 - accuracy: 0.9682 - val_loss: 1.7360 - val_accuracy: 0.6548
+[[0.02094094 0.97905904]]
+the changes are higher than 0.9790590405464172 that your sample is not dangerous
+
+
+
+
+
+
+
+
+
+
