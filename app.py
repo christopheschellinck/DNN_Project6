@@ -1,7 +1,6 @@
 import os
 from flask import Flask, request, render_template, redirect, url_for
 from predictions import get_prediction
-from PIL import Image,Imagefile
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static'
