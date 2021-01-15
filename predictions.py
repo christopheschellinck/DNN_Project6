@@ -4,6 +4,7 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications import mobilenet
 from tensorflow.keras.models import load_model
+from PIL import Image
 
 #preprocess an image
 def preprocessing_image(img_path):
