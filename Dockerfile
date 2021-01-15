@@ -1,19 +1,15 @@
 FROM ubuntu:18.04
-FROM python:3.8
-
-RUN apt-get update -y 
-RUN pip3 install -U scikit-learn
-
-RUN mkdir /app 
+RUN apt-get update && apt-get install -y python3 python3-pip sudo
+RUN mkdir /app
 COPY requirements.txt .
-COPY app_CNN.py /app/app_CNN.py
-COPY asset /app/asset
+COPY app.py /app/app.py
+COPY predictions.py /app/predictions.py
 COPY mobile_net_test.h5 /app/mobile_net_test.h5
-
-RUN pip install -r requirements.txt
-
+COPY /static /app/static
+COPY /templates /app/templates
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install -r requirements.txt
+RUN pip3 install pillow
 WORKDIR /app
-
-CMD ["python", "app_CNN.py"]
-
+CMD ["python3", "app.py"]
 
