@@ -10,6 +10,9 @@
 * Presentation: `15/11/2020 14:00`
 * Team challenge: `Ankita, Saba, Didier, Christophe from Becode/bouman`
 
+## webpage making use of the model and prediction service
+
+`https://skincancer-prediction.herokuapp.com/upload`
 
 ## Mission objectives 
 * Be able to apply a CNN in a real context
@@ -37,20 +40,23 @@
 ### the making of a model that is pretrained: MobileNet from Keras
 * model_mobilenet.py
 * Those pretrained models enables to make use of it's complete potential and use all layers not-fully connected CNN layers or some of them. This happens by freezing some we don't want to be activated.
-* the results of the training can be found in20200112training_results.odt    
+* the results of the training can be found in 20200112training_results.odt    
 
 ### apply data augmentation 
 * in order to improve the model and reduce overfitting, data augmentation was applied: due to a discrepancy between the model's 'accuracy' and 'validation_accuracy':
 * by modifying the brightness of the images, we got the most optimized results. We used several options and combinations but that option was the best.
 
+### Predictions
+* The predictions can be found in the separate file predictions.py and integrated in the app_CNN.py one
+
 ### performance evaluation of the model
 * performance_measure.py
 
 ### Deployment technologies Flask, Docker and Heroku
--> app_CNN.py includes the preprocessing of the single image provided and the prediction and the flask code
--> file making use of flask: model_flask_test.py 
--> Dockerfile
--> Procfile for Heroku 
+* app_CNN.py includes the preprocessing of the single image provided and the prediction and the flask code
+* file making use of flask: app_CNN.py 
+* Dockerfile
+* Procfile for Heroku 
 
 ### Data
 * the repo also contains the data under the folder 'skin cancer', in *.BMP format* that is used for this project
