@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, url_for
 from predictions import get_prediction
 
 app = Flask(__name__)
-@UPLOAD_FOLDER = 'static'
+# UPLOAD_FOLDER = 'static'
 UPLOAD_FOLDER = 'asset'
 
 @app.route('/')
